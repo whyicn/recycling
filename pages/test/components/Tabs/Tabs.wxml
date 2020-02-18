@@ -1,0 +1,28 @@
+  <view class="cu-bar tabbar bg-white">
+    <view class="action">
+      <view class="cuIcon-cu-image">
+        <image src="/images/tabbar/basics_cur.png"></image>
+      </view>
+      <view class="text-green">元素</view>
+    </view>
+    <view class="action">
+      <view class="cuIcon-cu-image">
+        <image src="/images/tabbar/component.png"></image>
+      </view>
+      <view class="text-gray">组件</view>
+    </view>
+    <view class="action">
+      <view class="cuIcon-cu-image">
+        <image src="/images/tabbar/plugin.png"></image>
+        <view class="cu-tag badge">99</view>
+      </view>
+      <view class="text-gray">扩展</view>
+    </view>
+    <view class="action">
+      <view class="cuIcon-cu-image">
+        <image src="/images/tabbar/about.png"></image>
+        <view class="cu-tag badge"></view>
+      </view>
+      <view class="text-gray">关于</view>
+    </view>
+  </view>

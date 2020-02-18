@@ -1,0 +1,12 @@
+<navigator   url="/pages/scan/startScan/index" hover-class="navigator-hover" open-type="navigate">
+    startScan
+</navigator>
+
+<text  bindtap="choosePhoto">选择图片</text>
+
+  
+<navigator url="/pages/scan/choosePhoto/index" hover-class="navigator-hover" open-type="navigate">
+    choosePhoto
+</navigator>
+  
+

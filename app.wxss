@@ -1,0 +1,29 @@
+@import "/styles/iconfont.wxss";
+@import "/styles/main.wxss";
+@import "/styles/icon.wxss";
+
+page,view,text,swiper,swiper-item,image,navigator{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+/* 
+  主题颜色 通过变量来实现
+  1. less 中存在变量这个知识
+  2. 原生css和wxss也是支持变量的
+*/
+page{
+
+  /* 定义主题颜色 */
+  /* --themeColor:#AAD2BB; */
+  /* --themeColor:linear-gradient(45deg, #AAD2BB, #8fff8bfd); */
+
+
+
+  /* 定义统一字体大小 假设设计稿 大小是375px 
+    1px = 2rpx
+    14px = 28rpx
+  */
+  font-size:28rpx;
+}

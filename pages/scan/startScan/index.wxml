@@ -1,0 +1,24 @@
+
+
+
+
+<camera device-position="back" flash="auto" binderror="error" style="width: 100%; height: 100vh;" mode="normal">
+
+
+<view class="cu-custom" style="height:{{CustomBar}}px">
+  <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}}" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;{{bgImage?'background-image:url(' + bgImage+')':''}}">
+
+    <view class="action" style="width:calc({{Custom.width}}px);height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px);">
+      
+      <text class="iconfont icon-quxiao" bindtap="BackPage"></text>
+
+    </view>
+  </view>
+</view>
+
+
+<button type="primary" bindtap="takePhoto" class="TakePhoto">拍照</button>
+</camera>
+
+
+

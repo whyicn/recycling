@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/guide/home/index", 
+    "pages/guide/search/index",
+    "pages/index/index",
+    "pages/scan/home/index",
+    "pages/scan/choosePhoto/index",
+    "pages/scan/startScan/index",
+    "pages/about/home/index",
+    "pages/test/demo/demo1/demo1",
+    "pages/quiz/home/index",
+    "pages/quiz/level/index",
+    "pages/quiz/study/index",
+    "pages/quiz/hard/index" 
+  ], 
+  "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#99cccc",
+        "navigationBarTitleText": "Recycling",
+        "navigationBarTextStyle": "white"
+  },
+  "style": "v2", 
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#505050",
+    "selectedColor": "#99cccc",
+    "borderStyle": "white",
+    "backgroundColor": "#FAFAFA",
+    "list": [
+      {
+        "pagePath": "pages/guide/home/index",
+        "text": "指南",
+        "iconPath": "icons/guideBefore.png",
+        "selectedIconPath": "icons/guideAfter.png"
+      },
+      {
+        "pagePath": "pages/quiz/home/index",
+        "text": "测试", 
+        "iconPath": "icons/testBefore.png",
+        "selectedIconPath": "icons/testAfter.png"
+      },
+      {
+        "pagePath": "pages/scan/home/index",
+        "text": "识别",
+        "iconPath": "icons/recognitionBefore.png",
+        "selectedIconPath": "icons/recognitionAfter.png"
+      },
+      {
+        "pagePath": "pages/about/home/index",
+        "text": "关于",
+        "iconPath": "icons/aboutBefore.png",
+        "selectedIconPath": "icons/aboutAfter.png"
+      }
+    ]
+  },
+    "usingComponents": {
+      "cu-custom": "/components/cu-custom/cu-custom"
+    }
+}

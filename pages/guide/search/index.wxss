@@ -1,0 +1,7 @@
+/* pages/guide/search/index.wxss */
+.searchArea{
+  background-color: white;
+  width: 100%;
+  
+}
+

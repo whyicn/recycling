@@ -1,0 +1,4 @@
+<!--pages/scan/choosePhoto/index.wxml-->
+<text>pages/scan/choosePhoto/index.wxml</text>
+<image class="" src="{{tempFilePaths}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+  

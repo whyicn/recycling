@@ -1,0 +1,14 @@
+<view class="cu-bar search bg-white">
+  <!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
+  <view class="search-form round">
+    <navigator class="search-navigator" url="/pages/guide/search/index" open-type="navigate">
+      <text class="cuIcon-search"></text> 
+      搜索垃圾查看对应分类
+    </navigator>
+    <!-- <input type="text" placeholder="搜索垃圾查看对应分类" confirm-type="search" ></input> -->
+  </view>
+  <view class="action">
+    <text bindtap="province">广州</text>
+    <text class="cuIcon-triangledownfill" bindtap="province"></text>
+  </view>
+</view>
