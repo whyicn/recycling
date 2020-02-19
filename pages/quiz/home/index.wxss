@@ -1,1 +1,43 @@
 /* pages/quiz/home/index.wxss */
+.quizPage{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+.upPage{
+  padding-top: 10vw;
+  margin-bottom: 10vw;
+}
+
+.kindtitle{
+  font-size: 70rpx;
+  font: bold;
+  align-content: center;
+  padding-top: 10vw;
+}
+
+.grade{
+  width: 50%;
+  align-items: left;
+  float: left;
+  padding-left: 50rpx;
+}
+
+.time{
+  width: 50%;
+  float: right;
+}
+
+.padding{
+  padding-top: 50rpx;
+}
+
+.btnArea{
+  margin-top: 40rpx;
+}
+
+.buttons{
+  	border-radius: 5000rpx;
+    
+}

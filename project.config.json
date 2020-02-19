@@ -65,8 +65,8 @@
 				},
 				{
 					"id": 1,
-					"name": "test",
-					"pathName": "pages/test/index",
+					"name": "quizHome",
+					"pathName": "pages/quiz/home/index",
 					"query": "",
 					"scene": null
 				},
@@ -87,6 +87,13 @@
 				{
 					"id": -1,
 					"name": "Searching",
+					"pathName": "pages/guide/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "searching Page",
 					"pathName": "pages/guide/search/index",
 					"query": "",
 					"scene": null

@@ -15,22 +15,22 @@
     <view class="flex flex-sub flex-direction solid-right">
       <view class="text-xxl text-orange">{{visitTotal}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-attentionfill"></text> View</view>
+        <text class="iconfont icon-zongliang"></text> 总答题 </view>
     </view>
     <view class="flex flex-sub flex-direction solid-right">
       <view class="text-xxl text-blue">{{starCount}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-favorfill"></text> Star</view>
+        <text class="iconfont icon-everage"></text> 平均每题耗时 </view>
     </view>
     <view class="flex flex-sub flex-direction">
       <view class="text-xxl text-green">{{forksCount}}</view>
       <view class="margin-top-sm">
-        <text class="cuIcon-fork"></text> Fork</view>
+        <text class="iconfont icon-zuiduo"></text> 最高答题 </view>
     </view>
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/whyicn/recycling">
         <text class="cuIcon-github text-grey"></text>
         <text class="text-grey">GitHub</text>
       </view>
@@ -58,12 +58,6 @@
         <text class="cuIcon-writefill text-cyan"></text>
         <text class="text-grey">意见反馈</text>
       </button>
-    </view>
-    <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/test/list" hover-class="none">
-        <text class="cuIcon-creativefill text-orange"></text>
-        <text class="text-grey">Bug测试</text>
-      </navigator>
     </view>
   </view>
   <view class="cu-tabbar-height"></view>

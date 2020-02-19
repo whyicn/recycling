@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "quiz": "../../components/quiz/quiz"
+    "quiz": "../../components/quiz/quiz",
+    "province": "../../components/province/province"
   }
 }

@@ -3,6 +3,7 @@
     "pages/guide/home/index", 
     "pages/guide/search/index",
     "pages/index/index",
+    "pages/guide/scan/index", 
     "pages/scan/home/index",
     "pages/scan/choosePhoto/index",
     "pages/scan/startScan/index",
@@ -38,12 +39,6 @@
         "text": "测试", 
         "iconPath": "icons/testBefore.png",
         "selectedIconPath": "icons/testAfter.png"
-      },
-      {
-        "pagePath": "pages/scan/home/index",
-        "text": "识别",
-        "iconPath": "icons/recognitionBefore.png",
-        "selectedIconPath": "icons/recognitionAfter.png"
       },
       {
         "pagePath": "pages/about/home/index",

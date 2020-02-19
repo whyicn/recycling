@@ -1,24 +1,29 @@
+<view class="searching-view">
 
-<view class="cu-bar search bg-white">
-  <view class="search-form round">
-    <text class="cuIcon-search"></text> 
-    <input type="text" placeholder="搜索垃圾查看对应分类" confirm-type="search" maxlength="50" focus="true" confirm-type="search" bindtap="searching">
-    </input> 
-  </view>
-      <view class="action">
-      <button class="cu-btn round bg-themeGray" style="width:10vh" bindtap="BackPage">取消</button>
-    </view>
-
-
-</view>
   <view class="cu-bar search bg-white">
     <view class="search-form round">
       <text class="cuIcon-search"></text>
-      <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+      <input type="text" placeholder="搜索垃圾查看对应分类" confirm-type="search" maxlength="50" focus="true" confirm-type="search" bindtap="searching">
+      </input>
     </view>
-
+    <view class="action">
+      <button class="cu-btn round bg-themeGray" style="width:10vh" bindtap="BackPage">取消</button>
+    </view>
   </view>
 
-<view class="searchArea">
-sdgsdg
+  <view class="resultArea">
+    <text class="resultText">  大家都在搜 </text>
+    <view class="hotWord">
+    <view class="cu-tag round">塑料袋</view>
+    </view>
+  </view>
+
+  <view class="resultArea">
+    <text class="resultText">  最近搜索 </text>
+    <view class="hotWord">
+    <view class="cu-tag round">垃圾袋</view>
+    </view>
+  </view>
+
 </view>
+

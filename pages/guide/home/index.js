@@ -1,77 +1,54 @@
-// 引入用来发送请求的方法 一定要把路径引全
-import {  } from "../../../request/index";
-
-
-// pages/guide/home/index.js
-
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    swiperList:[]
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+    list: [{
+        title: '湿垃圾',
+        img: 'https://ae01.alicdn.com/kf/H7434402726f24820a463fccfad45a564L.png',
+        url: '/indexes/indexes'
+      },
+      {
+        title: '干垃圾',
+        img: 'https://ae01.alicdn.com/kf/Hae8031b12603406fa9dbf2c45f3a09f21.png',
+        url: '/drawer/drawer'
+      },
+      {
+        title: '有害垃圾',
+        img: 'https://ae01.alicdn.com/kf/H475426f5229745568b36cb1af16e61adQ.png',
+        url: '/animation/animation'
+      },
+      {
+        title: '可回收垃圾',
+        img: 'https://ae01.alicdn.com/kf/Hd35e5e41f9c24105882b3f213686fc152.png',
+        url: '/verticalnav/verticalnav'
+      }
+    ]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-    // request({ url:"https://api.zbztb.cn/api/public/v1/home/swiperdata"})
-    // .then(result=>{
-    //   success: (result) => {
-    //     console.log(result);
-    //   }
-    // })
+  scanPic() {
+    wx.navigateTo({
+      url: '/pages/guide/scan/index',
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  province() {
+    wx.showModal({
+      title: '提示',
+      content: '  ',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  searchPage() {
+    wx.navigateTo({
+      url: '/pages/guide/search/index',
+    })
   }
 })

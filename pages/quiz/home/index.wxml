@@ -1,1 +1,45 @@
 <quiz></quiz>
+
+
+<view class="quizPage text-center">
+  <view class="upPage">
+    <text class="grade" selectable="false" space="false" decode="false">
+        1/10
+    </text>
+    <text class="time" selectable="false" space="false" decode="false">
+        时间
+    </text>
+    <view class="kindtitle">
+          <text>
+冰激凌脆筒    
+</text>
+
+    </view>
+
+  </view>
+  <view class="btnArea">
+    <button class="buttons" style="width:60vw">
+      button1
+    </button>
+  </view>
+    <view class="btnArea">
+    <button class="buttons" style="width:60vw">
+      button1
+    </button>
+  </view>
+  
+    <view class="btnArea">
+    <button class="buttons" style="width:60vw">
+      button1
+    </button>
+  </view>
+  
+    <view class="btnArea">
+    <button class="buttons" style="width:60vw">
+      button1
+    </button>
+  </view>
+  
+ 
+
+</view>

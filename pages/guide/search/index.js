@@ -1,3 +1,5 @@
+const app = getApp();
+
 // pages/guide/search/index.js
 Page({
 
@@ -5,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      ColorList: app.globalData.ColorList
   },
 
   /**

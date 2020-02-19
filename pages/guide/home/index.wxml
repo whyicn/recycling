@@ -1,14 +1,27 @@
 <view class="cu-bar search bg-white">
-  <!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
-  <view class="search-form round">
-    <navigator class="search-navigator" url="/pages/guide/search/index" open-type="navigate">
-      <text class="cuIcon-search"></text> 
-      搜索垃圾查看对应分类
-    </navigator>
-    <!-- <input type="text" placeholder="搜索垃圾查看对应分类" confirm-type="search" ></input> -->
-  </view>
   <view class="action">
     <text bindtap="province">广州</text>
     <text class="cuIcon-triangledownfill" bindtap="province"></text>
   </view>
+
+  <!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
+  <view class="search-form round"  bindtap="searchPage">    
+      <text class="cuIcon-search"></text> 
+      搜索垃圾查看对应分类
+  </view>
+
+  <view class="action">
+    <text class="iconfont icon-saomiao" bindtap="scanPic"></text>
+  </view>
+
 </view>
+
+
+
+  <view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.img}})" bindtap="toChild" data-url="{{item.url}}" wx:for="{{list}}" wx:key>
+      <view class="cardTitle">
+        {{item.title}}
+      </view>
+    </view>
+  </view>

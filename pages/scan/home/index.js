@@ -63,6 +63,19 @@ Page({
   onShareAppMessage: function () {
 
   },
+  takePhoto(){
+    wx.wx.chooseImage({
+      count: 9,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['camera'],
+      success: (result) => {
+        console.log(res.tempFilePaths);
+      },
+      fail: () => {},
+      complete: () => {}
+    });
+      
+  },
 
   choosePhoto() {
     wx.chooseImage({
