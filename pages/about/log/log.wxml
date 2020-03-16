@@ -1,0 +1,42 @@
+
+
+<view class="cu-timeline">
+
+<!-- 
+  <view class="cu-item text-green">
+    <view class="bg-gradual-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2</view>
+        <view class="cu-tag line-white">20</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.</view>
+      </view>
+    </view>   
+  </view>
+
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2</view>
+        <view class="cu-tag line-white">20</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.</view>
+      </view>
+    </view>
+  </view>
+  -->
+
+
+
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.0</view>
+        <view class="cu-tag line-white">2020/3/15</view>
+      </view>
+      <view class="margin-top-sm text-content">1.0版本上线</view>
+    </view>
+  </view>
+</view>

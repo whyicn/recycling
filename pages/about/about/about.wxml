@@ -1,0 +1,10 @@
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于Recycling分类帮手</view>
+  <view class='text-content'>
+    <view>Hi！欢迎使用Recycling分类帮手！</view>
+    <view class='margin-top-sm'>  该项目是我个人开发的一款微信小程序分类帮手。在这个程序里不仅可以学习垃圾分类的知识，还可以和全国的用户排名竞技。软件使用过程中如果你有建议或者想法可以在反馈界面进行反馈，期待和你的联系。</view>
+    <view class='margin-top-sm'>  项目是开源的，不收取任何费用，如果这个项目有帮到你，或者你觉得很赞，可以扫描赞赏码支持一下！٩(๑❛ᴗ❛๑)۶</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

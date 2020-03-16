@@ -15,8 +15,22 @@
    <block wx:elif="{{tabs[1].isActive}}">1 </block>
    <block wx:elif="{{tabs[2].isActive}}">2 </block>
    <block wx:elif="{{tabs[3].isActive}}">3 </block>
-   
-
 </Tabs>
 
+
+  <view class="cardItem" wx:for="{{list}}" data-item="{{item}}" data-index="{{index}}" bindtouchstart="scale" bindtouchend="reset" bindtouchcancel="reset" bindtouchmove="reset" bindtap="scale" animation="{{item.animation}}">
+  {{item}}
+  {{index}}
+  {{item.animation}}
   
+</view>
+<button bindtap="request">request</button>
+
+<button bindtap="ajaxRequest">ajaxRequest</button>
+
+
+<button bindtap="click">click</button>
+
+<text>搜索高亮</text>
+
+<view class="viewsss" style="{{annimation}}" bindtap="annimation"></view>

@@ -1,0 +1,76 @@
+<view class="content" scroll-y="false">
+<view style="background-color:white">
+<view class="topLeft">闯关竞速{{}}</view>
+<view class="topRight">限时闯关</view>
+</view>
+<scroll-view class="scrollLeft" 
+  refresher-enabled="{{true}}"
+  refresher-threshold="{{45}}"
+  refresher-default-style="none"
+  refresher-background="white"
+  bindrefresherpulling="{{refresh.onPulling}}"
+  scroll-y="true"
+>
+
+<view class="topList"  style="width:90%; padding-top:20rpx; padding-left:5%; text-align:center; align-items:center"  >
+<view>排名</view>
+<view>昵称</view>
+<view>答题数</view>
+<view>耗时</view>
+</view>
+
+<view style="width:100%;  text-align:center" wx:if="{{racingTop!=null}}" wx:for="{{racingTop}}" wx:key="openid" data-item="{{item}}" data-index="{{index}}">
+
+<view class="topList"  style="width:90%; padding-top:20rpx; padding-left:5%; text-align:center; align-items:center"  >
+
+<view style="text-align:center"> 
+
+  <text  class="iconfont {{index+1 == 1 ? 'icon-huabanfuben1':''}} {{index+1 == 2 ? 'icon-xunzhang1':''}} {{index+1 == 3 ? 'icon-xunzhang':''}} {{item.racingColor}}">
+  </text>
+  <text hidden="{{index+1<4}}">No.{{index+1}}</text>
+  </view>
+<view class="{{item.racingColor}}">{{item.nickName}}</view>
+<view class="{{item.racingColor}}">{{item.racingHit}}</view>
+<view class="{{item.racingColor}}">{{item.racingTime}}</view>
+</view>
+</view>
+
+</scroll-view>
+
+
+<scroll-view class="scrollRight"
+  refresher-enabled="{{true}}"
+  refresher-threshold="{{45}}"
+  refresher-default-style="none"
+  refresher-background="lightgreen"
+  bindrefresherpulling="{{refresh.onPulling}}"
+  scroll-y="true"
+>
+
+
+<view class="topList"  style="width:90%; padding-top:20rpx; padding-left:5%; text-align:center; align-items:center"  >
+<view>排名</view>
+<view>昵称</view>
+<view>答题数</view>
+<view>耗时</view>
+</view>
+
+
+<view style="width:100%;  text-align:center" wx:if="{{racingTop!=null}}" wx:for="{{timeLimitTop}}" wx:key="openid" data-item="{{item}}" data-index="{{index}}">
+
+<view class="topList"  style="width:90%; padding-top:20rpx; padding-left:5%; text-align:center; align-items:center"  >
+
+<view style="text-align:center"> 
+  <text  class="iconfont {{index+1 == 1 ? 'icon-huabanfuben1':''}} {{index+1 == 2 ? 'icon-xunzhang1':''}} {{index+1 == 3 ? 'icon-xunzhang':''}} {{item.limitColor}}"></text>
+  <text hidden="{{index+1<4}}">No.{{index+1}}</text>
+  </view>
+<view class="{{item.limitColor}}">{{item.nickName}}</view>
+<view class="{{item.limitColor}}">{{item.limitHit}}</view>
+<view class="{{item.limitColor}}">{{item.limitTime}}</view>
+</view>
+</view>
+
+
+</scroll-view>
+
+</view>

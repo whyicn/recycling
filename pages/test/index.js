@@ -12,7 +12,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx:wx.request({
+      url: 'http://localhost:8080/SpringMvc_quickStart_war/',
+      data: {
+        username: 123,
+        password: 12
+      },
+      header: {},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    console.log("发送请求")
   },
 
   /**
@@ -20,8 +34,10 @@ Page({
    */
   onReady: function () {
 
+
   },
 
+ 
   /**
    * 生命周期函数--监听页面显示
    */

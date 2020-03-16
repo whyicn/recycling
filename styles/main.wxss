@@ -5,7 +5,7 @@ page {
 	/* Color 可以自定义相关配色 */
 	/* var属性兼容性 --> https://www.caniuse.com/#feat=css-variables */
 	/* 标准色 */
-  
+
   --pinkBar:#99b2cc;
   --themeColor:#99cccc;
   --themeContrast:#cccc99;
@@ -42,6 +42,8 @@ page {
 	--brownLight: #ede1d9;
 	--greyLight: #e7ebed;
 	/* 渐变色 */
+  --testColor:linear-gradient(45deg, #ff333386, #ff993360);
+  
 	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
 	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
 	--gradualGreen: linear-gradient(45deg, rgb(160, 238, 194), rgb(153, 207, 176));

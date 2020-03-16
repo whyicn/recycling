@@ -1,10 +1,78 @@
-.UCenter-bg {
-  background-image: url(https://image.weilanwl.com/color2.0/index.jpg);
-  background-size: cover;
-  height: 550rpx;
+/**index.wxss**/
+@import "/styles/main.wxss";
+
+.text-grey{
+  padding-left: 20rpx;
+}
+
+.userinfo {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  position: absolute;
+  top: 20rpx;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+  background-color: beige;
+}
+
+.userinfo-nickname {
+  color: #505050;
+  position: absolute;
+  top: 62%;
+  font-size: 36rpx;
+}
+
+
+
+
+
+.gradeView{
+  
+  border-radius: 30rpx;
+  margin: 0 4%;
+  position: absolute;
+  top: 345rpx;
+  width: 92%;
+}
+
+
+.aboutView{
+margin-top: 150rpx;
+}
+
+.getUserButton{
+  border-radius: 50rpx;
+  background-color: #99cccc;
+  border-color: #5050503a;
+  border-style: solid;
+  width: 50%;
+  box-shadow: 5px 5px 10px #8888883a;
+  font-size: 40rpx;
+  color: #505050ad;
+}
+
+
+
+
+
+
+.UCenter-bg {
+  /* background-image: url(https://image.weilanwl.com/color2.0/index.jpg); */
+  border-bottom-right-radius: 25rpx;
+  border-bottom-left-radius: 25rpx;
+  background-size: cover;
+  height: 430rpx;
+  display: flex;
+  background-color: var(--themeColor);
   justify-content: center;
-  padding-top: 40rpx;
+  padding-bottom: 50rpx;
+  padding-top: 35rpx;
   overflow: hidden;
   position: relative;
   flex-direction: column;

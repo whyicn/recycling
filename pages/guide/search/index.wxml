@@ -3,27 +3,42 @@
   <view class="cu-bar search bg-white">
     <view class="search-form round">
       <text class="cuIcon-search"></text>
-      <input type="text" placeholder="搜索垃圾查看对应分类" confirm-type="search" maxlength="50" focus="true" confirm-type="search" bindtap="searching">
+      <input type="text" placeholder="搜索垃圾查看对应分类" confirm-type="search" maxlength="50" focus="true" confirm-type="search" bindinput="plainSearch">
       </input>
     </view>
     <view class="action">
-      <button class="cu-btn round bg-themeGray" style="width:10vh" bindtap="BackPage">取消</button>
+      <button class="cu-btn round bg-themeGray" style="width:13vh" bindtap="BackPage">取消
+      </button>
     </view>
   </view>
 
   <view class="resultArea">
     <text class="resultText">  大家都在搜 </text>
     <view class="hotWord">
-    <view class="cu-tag round">塑料袋</view>
+    <view class="cu-tag round hotwordresult" wx:for="{{PeopleSearch}}" wx:key="{{searchWord}}" data-item="{{item}}" data-index="{{index}}" bindtap="clickHotWord">{{item.searchWord}}</view>
+
     </view>
   </view>
 
   <view class="resultArea">
     <text class="resultText">  最近搜索 </text>
     <view class="hotWord">
-    <view class="cu-tag round">垃圾袋</view>
+    <view class="cu-tag round hotwordresult" wx:for="{{SelfSearch}}" wx:key="{{searchWord}}" data-item="{{item}}" data-index="{{index}}" bindtap="clickHotWord">{{item.searchWord}}</view>
     </view>
   </view>
 
 </view>
 
+
+
+<view class="selectcity" hidden="{{Tohidden}}">
+  
+    <scroll-view scroll-y="true" class="cu-item {{menuArrow?'arrow':''}} listResult">
+      <view class="content key-content" wx:for="{{ResultList}}" wx:key="id" data-item="{{item}}" data-index="{{index}}" >
+        <view class="key-things"><text class="key-text">{{item.thingsBefore}}<text style="color:black; ">{{item.things}}</text>{{item.thingsAfter}}</text></view>
+        <view class="key-type"><text class="key-text" >{{item.type}}</text></view>
+      </view>
+
+    </scroll-view>
+<view></view> 
+</view>

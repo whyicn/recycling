@@ -1,0 +1,20 @@
+<view class="quizPage">
+<view class="topTime" style=" {{topCheck }}"></view>
+  <view class="upPage">
+    <text class="grade" selectable="false" space="false" decode="false">连续答题：{{totalHit}}</text>
+    <text class="time" selectable="false" space="false" decode="false"><text class='marright'> <text hidden="{{hour==00}}"> {{hour}}:</text>{{min}}:{{sec}}:{{mill}}</text></text>
+  
+  </view>
+
+    <view class="kindtitle">
+      <text class="text-center" style="">{{question}}</text>
+    </view>
+
+  <view class="testWordArea">
+    <view class="testWord" style="width:60vw" wx:for="{{elements}}" data-item="{{item}}" wx:key="title" hover-class="testWordhover" bindtap="answer">
+      <text class="texts" style="font-size:45rpx;">{{item.title}}</text>
+    </view>
+
+  </view>
+
+</view>

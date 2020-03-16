@@ -26,4 +26,15 @@ page{
     14px = 28rpx
   */
   font-size:28rpx;
+
+
 }
+
+  .iconfont {
+  font-family: "iconfont" !important;
+  font-size: 45rpxpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
