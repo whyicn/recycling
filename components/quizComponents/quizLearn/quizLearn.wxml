@@ -1,0 +1,121 @@
+
+<view
+ class="scrollPage"
+ bindtouchmove="move"
+ catchtouchmove='true'
+ animation="{{animation}}"
+ hidden="{{bodyHidden}}"
+>
+
+	<view class='nav-list'>
+		<view
+		 hover-class='none'
+		 class="nav-li"
+		 wx:for="{{elements}}"
+		 wx:key="name"
+		 data-item="{{item}}"
+		 style="background-image:{{item.backgroundImage}}"
+		 bindtap="chooseModel"
+		>
+			<view class="nav-title">{{item.title}}</view>
+			<view class="nav-name">{{item.name}}</view>
+			<text class='iconfont {{item.icon}}' style="color:{{item.color}}"/>
+
+
+    </view>
+
+		<navigator
+		 open-type="navigate"
+		 hover-class='none'
+		 url="quizLearnDetail/quizLearnDetail"
+		 class="nav-li"
+		 style="width:100%; background-image:linear-gradient(45deg, #cccc9970, #cccc9950)"
+		 bindtap="chooseModel"
+		>
+			<view class="nav-title">全分类乱序学习</view>
+			<view class="nav-name">random</view>
+			<text class='iconfont {{item.icon}}' style="color:{{item.color}}"/>
+
+    </navigator>
+
+		<view
+		 open-type="navigate"
+		 hover-class='none'
+		 url="quizLearnDetail/quizLearnDetail"
+		 class="nav-li collection"
+		 style="width:100%; background-image:linear-gradient(45deg, #99CCCC40, #99B2CC70)"
+		 bindtap="collectionList"
+		>
+			<view class="nav-title">我的收藏</view>
+			<view class="nav-name">Collection</view>
+			<text class='iconfont {{item.icon}}' style="color:{{item.color}}"/>
+
+    </view>
+	</view>
+</view>
+
+<!-- 学习List界面 -->
+<view class="learnChooseArea" animation="{{learnAnimation}}" hidden="{{learnHidden}}">
+
+	<view
+	 style="width:100%; height:120rpx;background-image:linear-gradient(45deg, #7BA1C740, #F7D98D70); margin-bottom:30rpx; border-radius:20rpx"
+	 class="learnChose"
+	 bindtap="collect"
+	 wx:for="{{learnMaterial}}"
+	 wx:key="id"
+	 data-item="{{item}}"
+	 data-index="{{index}}"
+	>
+		<view style="font-size:37rpx" style="float:left">{{item.type}}</view>
+		<view style="width:4rpx; height:80%; background-color: lightgray; filter:blur(2rpx); margin-right:40rpx; border-radius:10rpx;" />
+		<view style="font-size:35rpx">{{item.things}}</view>
+		<image src="../../../icons/{{item.collection}}" style="width:40rpx; height:40rpx" />
+
+	</view>
+
+	<view class="flexType listItem">
+		<view style="size:50rpx； background-color:blue; width:30%; height:150rpx;" class="flexType" bindtap="learn">
+			<text class="iconfont icon-icon-test"/>
+    </view>
+
+		<view style="size:50rpx； background-color:blue; width:100%; height:150rpx;" class="flexType" bindtap="chooseModel">
+			<text>下一组</text>
+		</view> 
+	</view>
+
+</view>
+
+<!-- 收藏界面 -->
+
+
+<scroll-view class="collectionArea" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50"  animation="{{collectionAnimation}}"  hidden="{{collectionHidden}}">
+
+	<view
+	 style="width:100%; height:120rpx;background-image:linear-gradient(45deg, #7BA1C740, #F7D98D70); margin-bottom:30rpx; border-radius:20rpx"
+	 class="learnChose"
+	 bindtap="unCollect"
+	 wx:for="{{collection}}"
+	 wx:key="id"
+	 data-item="{{item}}"
+	 data-index="{{index}}"
+	>
+		<view style="font-size:37rpx" style="float:left">{{item.type}}</view>
+		<view style="width:4rpx; height:80%; background-color: lightgray; filter:blur(2rpx); margin-right:40rpx; border-radius:10rpx;" />
+		<view style="font-size:35rpx">{{item.things}}</view>
+		<image src="../../../icons/{{item.collection}}"  style="width:40rpx; height:40rpx"/>
+
+	</view>
+
+	<view class="flexType collectionItem" style="position:fixed; bottom:15%; ">
+		<view style="size:50rpx; width:30%; height:100rpx;" class="flexType" bindtap="collectionBack">
+			<text class="iconfont icon-icon-test"/>
+    </view>
+
+		<view style="size:50rpx; width:50%; height:100rpx;" class="flexType" bindtap="deleteCollection">
+			<text>取消收藏</text>
+		</view> 
+	</view>
+
+    
+</scroll-view>
+  

@@ -1,45 +1,44 @@
-<quiz></quiz>
+<view style="">
+
+<view class="bg-themeColor nav text-center fixed">
+  <view class="cu-item  {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+    <text class="iconfont icon-lianxihui"></text> 学习模式
+  </view>
+  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+    <text class="iconfont icon-chuangguan"></text> 闯关竞速
+  </view>
+    <view class="cu-item {{2==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="2">
+    <text class="iconfont icon-iconfont-daojishi"></text> 限时
+  </view> 
+  <view class="cu-item {{3==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="3">
+    <text class="iconfont icon-paihangbang1"></text> 排行榜
+  </view> 
+</view>
 
 
-<view class="quizPage text-center">
-  <view class="upPage">
-    <text class="grade" selectable="false" space="false" decode="false">
-        1/10
-    </text>
-    <text class="time" selectable="false" space="false" decode="false">
-        时间
-    </text>
-    <view class="kindtitle">
-          <text>
-冰激凌脆筒    
-</text>
 
-    </view>
+<view hidden="{{TabCur==0?false:true}}">
+<quizLearn></quizLearn>
+</view>
 
-  </view>
-  <view class="btnArea">
-    <button class="buttons" style="width:60vw">
-      button1
-    </button>
-  </view>
-    <view class="btnArea">
-    <button class="buttons" style="width:60vw">
-      button1
-    </button>
-  </view>
-  
-    <view class="btnArea">
-    <button class="buttons" style="width:60vw">
-      button1
-    </button>
-  </view>
-  
-    <view class="btnArea">
-    <button class="buttons" style="width:60vw">
-      button1
-    </button>
-  </view>
-  
- 
 
+<view hidden="{{TabCur==1?false:true}}">
+<quizRacing></quizRacing>
+</view>
+
+
+<view  hidden="{{TabCur==2?false:true}}">
+<quizTimeLimit></quizTimeLimit>
+</view>
+
+
+<scroll-view  hidden="{{TabCur==3?false:true}}"
+  refresher-enabled="{{true}}"
+  refresher-threshold="{{45}}"
+  refresher-default-style="none"
+  refresher-background="white"
+  bindrefresherpulling="{{refresh.onPulling}}"
+  scroll-y="true">
+<quizTop></quizTop>
+</scroll-view>
 </view>

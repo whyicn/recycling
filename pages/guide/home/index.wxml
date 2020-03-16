@@ -1,27 +1,199 @@
-<view class="cu-bar search bg-white">
-  <view class="action">
-    <text bindtap="province">广州</text>
-    <text class="cuIcon-triangledownfill" bindtap="province"></text>
+<view class="cu-bar search bg-white" hidden="{{!tohidden}}">
+	<view class="action">
+		<text bindtap="selectprovince">{{selectedCity}}</text>
+		<text class="cuIcon-triangledownfill" bindtap="selectprovince"/>
+
   </view>
 
-  <!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
-  <view class="search-form round"  bindtap="searchPage">    
-      <text class="cuIcon-search"></text> 
-      搜索垃圾查看对应分类
+	<!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
+	<view class="search-form round" bindtap="searchPage">
+		<text class="cuIcon-search"/>
+ 搜索垃圾查看对应分类
+
   </view>
 
-  <view class="action">
-    <text class="iconfont icon-saomiao" bindtap="scanPic"></text>
+	<view class="action">
+		<text class="iconfont icon-saomiao" bindtap="scanPic"/>
+
   </view>
+
+</view>
+
+<view class="cu-card" hidden="{{!tohidden}}">
+	<view
+	 class="cu-item bg-img shadow-blur"
+	 style="background-color:{{item.color}}"
+	 wx:for="{{list}}"
+	 wx:key="title"
+	 data-item="{{item}}"
+	 data-index="{{index}}"
+	 bindtouchstart="scale"
+	 bindtouchcancel="reset"
+	 bindtouchmove="reset"
+	 bindtap="open"
+	 bindtouchend="reset"
+	 animation="{{item.animation}}"
+	>
+
+		<view class="cardTitle  ">
+			{{item.title}}
+		</view>
+		<view class="wasteview">
+			<text class="{{item.iconfont}} wastelogo"/>
+			<view class="fonttext">
+				{{item.title}}
+			</view>
+			<view class="engtitle">
+				{{item.engtitle}}
+			</view>
+		</view>
+
+<!-- 详情模块 -->
+		<view class="" style="color:white;" hidden="{{item.hiddenname}}" >
+			<view class='text-content' style="padding:0 20rpx">
+				<view class='margin-top-sm'> {{item.tip}}。</view>
+			</view>
+			<view class="normalwasteview">
+				<view
+				 class="thingsContain"
+				 wx:for="{{item.randomList}}"
+				 data-item="{{item}}"
+				 data-index="{{index}}"
+				>
+					<text class="normalwaste">{{item.things}}</text>
+				</view>
+			</view>
+
+			<view
+			 class="reverse"
+			 bindtap="reverse"
+			 data-item="{{item}}"
+			 data-index="{{index}}"
+			>
+				<text class="iconfont icon-zhedie reverse"/>
+
+      </view>
+
+		</view>
+
+	</view>
+
+</view>
+
+
+<!--城市选择模块-->
+
+<view class="selectcity" hidden="{{tohidden}}">
+	<view class="listTop">
+		<text >{{selectedCity}}</text>
+		<text class="iconfont icon-zuobiaofill "/>
+</view>
+
+	<scroll-view scroll-y="true" class="cu-item {{menuArrow?'arrow':''}} listcity">
+		<view
+		 class="content"
+		 wx:for="{{cityList}}"
+		 wx:key="province"
+		 data-index="{{index}}"
+		>
+			<text class="text-grey" bindtap="selectCity" data-item="{{item}}">{{item.province}}</text>
+		</view>
+	</scroll-view>
 
 </view>
 
 
 
-  <view class="cu-card">
-    <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.img}})" bindtap="toChild" data-url="{{item.url}}" wx:for="{{list}}" wx:key>
-      <view class="cardTitle">
-        {{item.title}}
-      </view>
+
+<!-- 淡入动画 动画背景-->
+<view
+ class="toshadow"
+ hidden="{{tohidden}}"
+ bindtap="unSelectprovince"
+ bindtouchmove="{{tohidden?'reset':selectedCity}}"
+ catchtouchmove="{{tohidden?'reset':selectedCity}}"
+ style="{{cityAnination}}"
+>
+
+	<view class="cu-bar search bg-white">
+		<view class="action">
+			<text bindtap="">{{selectedCity}}</text>
+			<text class="cuIcon-triangledownfill" bindtap=""/>
+
     </view>
-  </view>
+
+		<!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
+		<view class="search-form round" bindtap="">
+			<text class="cuIcon-search"/>
+ 搜索垃圾查看对应分类
+
+    </view>
+
+		<view class="action">
+			<text class="iconfont icon-saomiao" bindtap=""/>
+
+    </view>
+
+	</view>
+	<view class="cu-card">
+
+		<view
+		 class="cu-item bg-img shadow-blur"
+		 style="background-color:{{item.color}}; margin-bottom:10rpx"
+		 wx:for="{{list}}"
+		 wx:key="title"
+		 data-item="{{item}}"
+		 data-index="{{index}}"
+		>
+
+			<view class="cardTitle  ">
+				{{item.title}}
+				<!-- {{item.engtitle}} -->
+
+			</view>
+			<view class="wasteview">
+				<text class="{{item.iconfont}} wastelogo"/>
+
+				<view class="fonttext">
+					{{item.title}}
+				</view>
+				<view class="engtitle">
+					{{item.engtitle}}
+				</view>
+
+			</view>
+
+			<view
+			 class="wastedetail"
+			 style="color:white;"
+			 data-item="{{item}}"
+			 data-index="{{index}}"
+			 hidden="{{item.hiddenname}}"
+			>
+
+				<view class='text-content' style="padding:0 20rpx">
+					<view class='margin-top-sm'> {{item.tip}}。</view>
+
+				</view>
+
+				<view class="normalwasteview">
+					<!-- TODO -->
+				</view>
+
+				<view
+				 class="reverse"
+				 bindtap="reverse"
+				 data-item="{{item}}"
+				 data-index="{{index}}"
+				>
+					<text class="iconfont icon-zhedie reverse"/>
+
+      </view>
+
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 淡出动画 -->
+

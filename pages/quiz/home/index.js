@@ -1,36 +1,43 @@
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dialogShow: false,
-    showOneButtonDialog: false,
-    buttons: [{ text: '取消' }, { text: '确定' }],
-    oneButton: [{ text: '确定' }],
-  },
-  openConfirm: function () {
-    this.setData({
-      dialogShow: true
-    })
-  },
-  tapDialogButton(e) {
-    this.setData({
-      dialogShow: false,
-      showOneButtonDialog: false
-    })
-  },
-  tapOneDialogButton(e) {
-    this.setData({
-      showOneButtonDialog: true
-    })
+    TabCur: 0,
+    scrollLeft: 0,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this;
+    wx:wx.request({
+      url: app.globalData.url+'/recycle/totalRandomList',
+      method: 'GET',  
+      dataType: 'json',
+      success: function(res) {
+        console.log(res.data)
+        if(res.data && (that.data.titleList == null)){
+          that.setData({
+            titleList: res.data
+          })
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })    
+  },
+  tabSelect(e) {
+    console.log(e.currentTarget.dataset.id);
+    this.setData({
+      TabCur: e.currentTarget.dataset.id,
+      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+    })
   },
 
   /**
@@ -38,7 +45,7 @@ Page({
    */
   onReady: function () {
     
-  },
+  }, 
 
   /**
    * 生命周期函数--监听页面显示

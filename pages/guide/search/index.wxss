@@ -1,3 +1,65 @@
+.key-content{
+    display: flex;
+  flex-flow: row wrap; /* 换行 */
+  align-content: center;
+  align-items: center;
+}
+.key-content::after{ 
+    width: 80%;
+    height: 1px;
+    border-top: solid #ACC0D8 1px;
+}
+.key-things{
+  display: flex;
+  flex-flow: row wrap; /* 换行 */
+  align-content: center;
+  align-items: center;
+  width: 30%;
+  margin-left: 10%;
+}
+.key-type{
+  display: flex;
+  flex-flow: row wrap; /* 换行 */
+  align-content: center;
+  align-items: center;
+  width: 30%;
+  margin-left: 10%;
+}
+
+.key-text{
+  font-size: 35rpx;
+  align-content: center;
+  color: lightgray;
+}
+
+.listcity {
+  white-space: nowrap;
+  width: 100%;
+  height: 98%;
+  background: gray;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  border: 1rpx solid gray;
+  text-align: center;
+}
+
+
+.listResult {
+  background-color: white;
+  width: 100%;
+  height: 90%;
+
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 100rpx;
+}
+
+.hotwordresult{
+  margin: 10rpx 5rpx;
+}
+
 .searching-view{
   width: 100%;
   height: 100vh;
@@ -17,4 +79,9 @@
 
 .hotWord{
   padding-top: 30rpx;
+  display: flex;
+  flex-flow: row wrap; /* 换行 */
+  align-content: space-around;
+  align-items: center;
+  padding-right: 50rpx;
 }

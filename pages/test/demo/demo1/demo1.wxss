@@ -1,1 +1,37 @@
 /* pages/test/demo/demo1/demo1.wxss */
+
+.cardItem{
+  width: 300rpx;
+  height: 300rpx;
+  background-color: red;
+  margin-left: 100rpx;
+}
+
+
+    .viewsss {
+
+        height: 100rpx;
+        width: 100rpx;
+        background-color: blue;
+    }
+    
+    @keyframes a1 {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-400%);
+            
+        }
+    }
+    
+        @keyframes a2 {
+        0% {
+            transform: translateY(-400%);
+        }
+        100% {
+            transform: translateY(0);
+            animation-fill-mode: forwards;
+        }
+    }
+    

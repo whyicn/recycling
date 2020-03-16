@@ -1,0 +1,47 @@
+
+<view class="selectcity" hidden="{{tohidden}}"></view>
+
+<!-- 淡入动画 -->
+
+<view class="toshadow" hidden="{{tohidden}}" bindtap="selectprovince" bindtouchmove="preventmove">
+
+<view class="cu-bar search bg-white">
+  <view class="action">
+    <text bindtap="">广州</text>
+    <text class="cuIcon-triangledownfill" bindtap=""></text>
+  </view>
+
+  <!-- <view class="cu-avatar round" style="background-image:url(https:// image.weilanwl.com/img/square-2.jpg);"></view> -->
+  <view class="search-form round" bindtap="">
+    <text class="cuIcon-search"></text> 搜索垃圾查看对应分类
+  </view>
+
+  <view class="action">
+    <text class="iconfont icon-saomiao" bindtap=""></text>
+  </view>
+
+</view>
+<view class="cu-card">
+
+  <view class="cu-item bg-img shadow-blur" style="background-color:{{item.color}}; margin-bottom:10rpx" wx:for="{{list}}" wx:key="title" data-item="{{item}}" data-index="{{index}}">
+
+    <view class="cardTitle  ">
+      {{item.title}}
+      <!-- {{item.engtitle}} -->
+
+
+    </view>
+    <view class="wasteview">
+      <text class="{{item.iconfont}} wastelogo"> </text>
+
+      <view class="fonttext">
+        {{item.title}}
+      </view>
+      <view class="engtitle">
+        {{item.engtitle}}
+      </view>
+
+    </view>
+    </view>
+    </view>
+</view>

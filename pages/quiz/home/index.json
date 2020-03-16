@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "quiz": "../../components/quiz/quiz",
-    "province": "../../components/province/province"
+    "quizRacing": "../../components/quizComponents/quizRacing/quizRacing",
+    "quizLearn": "../../components/quizComponents/quizLearn/quizLearn",
+    "quizTimeLimit": "../../components/quizComponents/quizTimeLimit/quizTimeLimit",
+    "quizTop": "../../components/quizComponents/quizTop/quizTop"
   }
 }

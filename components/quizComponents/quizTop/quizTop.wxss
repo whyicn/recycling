@@ -1,0 +1,91 @@
+
+@import "/styles/iconfont.wxss";
+page{background-color:rgb(255, 255, 255);}
+
+.racingColor{
+  color:#063c80;
+}
+.limitColor{
+  color:#2A66C4;
+}
+
+.topList{
+  justify-content: space-between;
+  flex-wrap:nowrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.topLeft{
+  background-color: white;
+  background-image: linear-gradient(45deg,#F9C37F60,#FB915A60);
+  border-radius: 40rpx;
+  width: 42%;
+  height: 5vh;
+  text-align:center;
+  line-height: 5vh;
+  display: inline-block; /*一定要将div设置为inline-block*/ 
+  vertical-align: middle;/*设置该元素在父元素中的位置*/
+  margin-right: 5%;
+  margin-bottom: 2vh;
+  box-shadow: 3rpx 3rpx 19rpx #F9C37F60;
+}
+
+
+.topRight{
+  background-image: linear-gradient(45deg,#2AB3C460,#55939C60);
+  border-radius: 40rpx;
+  width: 42%;
+  height: 5vh;
+  text-align:center;
+  line-height: 5vh;
+  display: inline-block; /*一定要将div设置为inline-block*/ 
+  vertical-align: middle;/*设置该元素在父元素中的位置*/
+  margin-left: 5%;
+  margin-bottom: 2vh;
+  box-shadow: 3rpx 3rpx 19rpx #2AB3C460;
+}
+
+.scrollLeft{
+  margin-bottom: 20rpx;
+  background-color: white;
+  width: 44%;
+  height: 73vh;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  float: left;
+  margin-left: 3%;
+  border-radius: 20rpx;
+  background-image: linear-gradient(45deg,#F9C37F70,#FB915A30);
+  box-shadow: 3rpx 3rpx 19rpx #F9C37F60;
+}
+
+.scrollRight{
+  margin-bottom: 20rpx;
+  background-color: white;
+  width: 44%;
+  height: 73vh;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 3%;
+  border-radius: 20rpx;
+  background-image: linear-gradient(45deg,#2AB3C470,#55939C30);
+  box-shadow: 3rpx 3rpx 19rpx #2AB3C460;
+}
+
+.content{
+  margin-top: 15vh;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+  flex-wrap: wrap;
+}
+ 

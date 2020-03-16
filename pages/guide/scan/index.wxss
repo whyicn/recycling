@@ -1,1 +1,272 @@
-/* pages/guide/scan/index.wxss */
+.preview-tips {
+  margin: 20rpx 0;  
+}
+
+
+.scrollfold {
+  white-space: nowrap;
+  width: 100%;
+  height: 500rpx;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 50rpx;
+}
+
+.icon-quxiao:before {
+  content: "\e601";
+  color: white;
+  font-size: 50rpx;
+}
+
+.icon-xiangce:before {
+  content: "\e665";
+  color: white;
+  font-size: 60rpx;
+  position: absolute;
+  align-items: center;
+  right: 60rpx;
+  z-index:4;
+}
+
+.scanbottom {
+  float: right;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.bling {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+  /* background-color: white;   */
+  width: 80%;
+  height: 55vh;
+  align-content: center;
+}
+
+.bingtext {
+  width: 80%;
+  text-align: center;
+  font-size: 35rpx;
+  color: #e9e9e9;
+  position: absolute;
+  bottom: 35%;
+  letter-spacing: 2rpx;
+}
+
+.clickPhoto {
+  content: "\e61d";
+  width: 120rpx;
+  color: white;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.flashtext {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 11%;
+  color: white;
+  letter-spacing: 4rpx;
+}
+
+.bg-shadeBottom {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 10%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.671));
+  color: var(--white);
+}
+
+.upcameraresult {
+  z-index: 4;
+  /* border-color: red; *//* border-style: solid; */
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  width: 100%;
+  height: 550rpx;
+  position: fixed;
+  bottom: -100%;
+  background-color: white;
+  animation-direction: normal;
+  /* background-color: red; */
+  animation: upresult;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  /* filter: blur(10rpx); */
+}
+
+@keyframes upresult {
+  from {
+    bottom: -100%;
+  }
+
+  to {
+    bottom: 0;
+  }
+}
+
+
+.downcameraresult {
+  z-index: 4;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  width: 100%;
+  height: 550rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  animation-direction: normal;
+  animation: downresult;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes downresult {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: -100%;
+  }
+}
+
+.cameraresult {
+  z-index: 4;
+  /* border-color: red; *//* border-style: solid; */
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  width: 100%;
+  height: 550rpx;
+  position: fixed;
+  bottom: -100%;
+}
+
+
+
+.icon-zhediexiangxia-copy:before {
+  content: "\ec1b";
+  position: relative;
+  padding: 4rpx 35rpx;
+  font-size: 35rpx;
+  text-align: center;
+  background-color: rgba(220, 220, 220, 0.404);
+  border-radius: 30rpx;
+  width: 100%;
+  height: 20rpx;
+}
+
+.foldlogo {
+  padding: 20rpx 15rpx;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.foldtext {
+  z-index: 10;
+  padding: 20rpx 40rpx;
+}
+
+.uploadimage{
+
+    backdrop-filter: blur(10rpx);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    animation: uploadimage;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /* filter: blur(10rpx); */
+    }
+
+    @keyframes uploadimage {
+      0% {
+        top: 0;
+        opacity: 0;
+      }
+
+      40% {
+        top: -10%;
+        opacity: 1;
+      }
+      100%{
+        top: -25%;
+        opacity: 1;
+      }
+    }
+
+.downloadimage{
+  background-color: white;
+  backdrop-filter: blur(10rpx);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -25%;
+  opacity:1;
+  animation: downloadimage;
+  animation-duration: 2100ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  /* filter: blur(10rpx); */
+  }
+
+  @keyframes downloadimage {
+    0% {
+      top: -25%;
+      filter:blur(0rpx);
+      opacity:1;
+    }
+
+    30% {
+      filter: blur(10rpx);
+      top: 0;
+      opacity:1;
+    }
+    90%{
+      filter: blur(15rpx);
+      top: 0;
+      opacity:1;
+    }
+    100%{
+      top: 0;
+      filter: blur(20rpx);
+      opacity:0;
+    }
+  }
+
+
+.camera{
+  filter: blur(10rpx);
+  opacity: 0;
+  animation: clearCamera;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+  @keyframes clearCamera {
+    from {
+      filter: blur(10rpx);
+      opacity: 0;
+    }
+    to {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }

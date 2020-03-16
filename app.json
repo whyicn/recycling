@@ -8,11 +8,10 @@
     "pages/scan/choosePhoto/index",
     "pages/scan/startScan/index",
     "pages/about/home/index",
+    "pages/about/log/log",
+    "pages/about/about/about",
     "pages/test/demo/demo1/demo1",
-    "pages/quiz/home/index",
-    "pages/quiz/level/index",
-    "pages/quiz/study/index",
-    "pages/quiz/hard/index" 
+    "pages/quiz/home/index" 
   ], 
   "window": {
         "backgroundTextStyle": "light",
